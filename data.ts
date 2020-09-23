@@ -23915,7 +23915,7 @@ let order = JSON.stringify([
       "ShipCountry":"USA"
    }]);
    export const orderDetails: Object[] = JSON.parse(order, (field, value) => {
-    let dupValue = value;
+    let dupValue = value;;
     if (typeof value === 'string' && /^(\d{4}\-\d\d\-\d\d([tT][\d:\.]*){1})([zZ]|([+\-])(\d\d):?(\d\d))?$/.test(value)) {
         let arr = dupValue.split(/[^0-9]/);
         value = new Date(parseInt(arr[0], 10), parseInt(arr[1], 10) - 1, 
